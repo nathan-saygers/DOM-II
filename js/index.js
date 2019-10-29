@@ -84,5 +84,4 @@ buttons.forEach(element => {
 	* [ ] `focus`
 	* [ ] `resize`
 	* [ ] `scroll`
-	* [ ] `select`
 	* [ ] `dblclick` */
