@@ -55,8 +55,25 @@ midPageImgs.forEach(element => {
 const destImg = document.querySelector('.content-destination img');
 destImg.addEventListener('click', () => {
   destImg.src='img/dest2.jpg'
+  destImg.style.transition='all 0.5s'
 });
 
+// Destination Divs turn light blue for mouseover //
+const destCard = document.querySelectorAll('.destination');
+destCard.forEach(element => {
+  element.addEventListener('click', () => {
+    element.style.backgroundColor='dodgerblue';
+  })
+});
+
+// Buttons Turn orange for mouseover //
+const buttons = document.querySelectorAll('.btn');
+buttons.forEach(element => {
+  element.addEventListener('mouseover', (event) => {
+    element.style.backgroundColor='orange';
+    event.stopPropagation;
+  })
+});
 
 /* [ ] Using your [index.js file](js/index.js), create 10 [unique event listeners](https://developer.mozilla.org/en-US/docs/Web/Events). using your creativity to make the Fun Bus site more interactive.  Here are some unique events you could try to use: 
 	* [ ] `mouseover`
