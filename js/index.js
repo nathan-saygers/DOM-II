@@ -18,10 +18,7 @@ funBusImg.addEventListener('mouseenter', () => {
   funBusImg.style.transition='all 0.5s';
   TweenMax.fromTo(welcomeText, 3, {opacity: 0, y: 50}, {opacity: 1, y: 0});
 });
-funBusImg.addEventListener('mouseleave', () => {
-  funBusImg.style.opacity='1';
-  funBusImg.style.transition='all 0.5s';
-});
+
 
 //console.log(funBusImg);
 
