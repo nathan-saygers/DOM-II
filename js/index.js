@@ -24,8 +24,9 @@ funBusImg.addEventListener('mouseenter', () => {
 
 // Text word "organized" changes to "blorganized" and is red //
 const textContent = document.querySelectorAll('.text-content p');
+textContent[0].style.fontFamily='Work Sans';
 textContent[0].addEventListener('mouseenter', () => {
-  textContent[0].innerHTML="Adventure webdesign pretty design design, excursion cute WordPress blogger design webdesign adventure. Pretty simple traveling fun WordPress wanderlust darn simple <strong>blorganized</strong>.";
+  textContent[0].innerHTML="Adventure webdesign pretty design design, excursion cute WordPress blogger design webdesign adventure. Pretty simple traveling fun WordPress wanderlust darn simple <b>blorganized</b>.";
 })
 
 // console.log(organized[0]);
@@ -69,7 +70,7 @@ destCard.forEach(element => {
 // Buttons Turn orange for mouseover //
 const buttons = document.querySelectorAll('.btn');
 buttons.forEach(element => {
-  element.addEventListener('mouseover', (event) => {
+  element.addEventListener('click', (event) => {
     element.style.backgroundColor='orange';
     event.stopPropagation;
   })
