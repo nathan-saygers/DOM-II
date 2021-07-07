@@ -9,28 +9,29 @@ navBar.addEventListener('dblclick', () => {
 
 console.log(navBar);
 
-// Fun Bus Image fades behind text "Welcome to Fun Bus!"
+// Fun Bus Image fades on hover over //
 const funBusImg = document.querySelector('.intro img');
+const welcomeText = document.querySelector('.welcome-text');
+
 funBusImg.addEventListener('mouseenter', () => {
-  funBusImg.textContent='Welcome to Fun Bus!'
-  funBusImg.style.opacity='.7';
+  funBusImg.style.opacity='.5';
   funBusImg.style.transition='all 0.5s';
+  TweenMax.fromTo(welcomeText, 3, {opacity: 0, y: 50}, {opacity: 1, y: 0});
 });
-funBusImg.addEventListener('mouseleave', () => {
-  funBusImg.style.opacity='1';
-  funBusImg.style.transition='all 0.5s';
-});
+
+
 //console.log(funBusImg);
 
-// Text content is bold when mouse on Let's Go text box //
+// Text word "organized" changes to "blorganized" and is red //
 const textContent = document.querySelectorAll('.text-content p');
-textContent[0].addEventListener('mouseover', () => {
-  textContent[0].innerHTML="Adventure webdesign pretty design design, excursion cute WordPress blogger design webdesign adventure. Pretty simple traveling fun WordPress wanderlust darn simple <b>organized</b>.";
+textContent[0].style.fontFamily='Work Sans';
+textContent[0].addEventListener('mouseenter', () => {
+  textContent[0].innerHTML="Adventure webdesign pretty design design, excursion cute WordPress blogger design webdesign adventure. Pretty simple traveling fun WordPress wanderlust darn simple <b>blorganized</b>.";
 })
 
 // console.log(organized[0]);
 
-// Text "Simple" is bold when mouse on "adventure awaits" text box //
+// Text "Simple" is underlined on mouseover //
 textContent[2].addEventListener('mouseover', () => {
   textContent[2].style.textDecoration='underline';
 
@@ -69,7 +70,7 @@ destCard.forEach(element => {
 // Buttons Turn orange for mouseover //
 const buttons = document.querySelectorAll('.btn');
 buttons.forEach(element => {
-  element.addEventListener('mouseover', (event) => {
+  element.addEventListener('click', (event) => {
     element.style.backgroundColor='orange';
     event.stopPropagation;
   })
@@ -84,5 +85,4 @@ buttons.forEach(element => {
 	* [ ] `focus`
 	* [ ] `resize`
 	* [ ] `scroll`
-	* [ ] `select`
 	* [ ] `dblclick` */
